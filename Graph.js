@@ -77,7 +77,7 @@ function topSortHelper(v, visited, stack) {
 
 function addEdge(v,w) {
 print('About to add ' + v + ' to ' + w);
-     this.adj[v].push(w);
+         this.adj[v].push(w);
          this.adj[w].push(v);
          this.edges++;
 
@@ -89,8 +89,7 @@ function showGraph() {
         write(this.vertexList[i] + " -> ");
 
         for (var j = 0; j < this.vertices; ++j) {            
-                if (this.adj[i][j] !== undefined) {        
-print(' ADJ is not undefined ');                
+                if (this.adj[i][j] !== undefined) {                        
                 var w = this.adj[i][j];                                          write(this.vertexList[w] + ' ');
                                               
              }
@@ -112,7 +111,7 @@ function dfs(v) {
         print("Visited vertex: " + v);
     }
 
-    for (var i = 0; i < this.adj[v].length; i++) {
+    for (var i = 0; i < this.adj[v]; i++) {
 
         var w = this.adj[v][w];
         if (!this.marked[w]) {
